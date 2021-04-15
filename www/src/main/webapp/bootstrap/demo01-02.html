@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Bootstrap</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-wdith,initial-scale=1.0">
+    <link href="css/bootstrap.css" rel="stylesheet">
+
+    <!-- IE9兼容 -->
+    <!-- [if llt IE 9]>
+        <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif] -->
+
+    <!-- 背景根据窗口自适应 -->
+    <style>
+        body{background: dodgerblue;}
+        @media(min-width: 600px) and (max-width: 1200px){body{background: white;}}
+    </style>
+</head>
+<body>
+
+    <h1 class="visible-lg">电脑显示visible-lg</h1>
+    <h1 class="visible-md">平板显示visible-md</h1>
+    <h1 class="visible-xs">手机显示visible-xs</h1>
+
+    <script src="js/jquery-3.1.1.js"></script>
+    <script src="js/bootstrap.js"></script>
+</body>
+</html>

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Bootstrap</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <link href="css/bootstrap-2.3.css" rel="stylesheet">
+
+    <!-- IE9兼容 -->
+    <!-- [if llt IE 9]>
+        <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif] -->
+
+</head>
+<body>
+
+    <!-- container限制宽度，并居中 -->
+    <div class="container">
+
+        <h1 class="page-header">选项卡</h1>
+
+        <div class="tabbable tabs-left">
+            <ul class="nav nav-tabs">
+                <li class="active"><a href="#tab1" data-toggle="tab">AAA</a></li>
+                <li><a href="#tab2" data-toggle="tab">BBB</a></li>
+                <li><a href="#tab3" data-toggle="tab">CCC</a></li>
+            </ul>
+            <div class="tab-content">
+                <div id="tab1" class="tab-pane active">AAA</div>
+                <div id="tab2" class="tab-pane">BBB</div>
+                <div id="tab3" class="tab-pane">CCC</div>
+            </div>
+        </div>
+
+        <ul class="nav nav-tabs nav-stacked">
+            <li class="active"><a href="#">AAA</a></li>
+            <li><a href="#">BBB</a></li>
+            <li><a href="#">CCC</a></li>
+        </ul>
+
+        <ul class="nav nav-pills">
+            <li class="active"><a href="#">AAA</a></li>
+            <li><a href="#">BBB</a></li>
+            <li><a href="#">CCC</a></li>
+        </ul>
+
+
+    </div>
+
+    <script src="js/jquery-3.1.1.js"></script>
+    <script src="js/bootstrap-2.3.js"></script>
+</body>
+</html>

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Bootstrap</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <link href="css/bootstrap-2.3.css" rel="stylesheet">
+
+    <!-- IE9兼容 -->
+    <!-- [if llt IE 9]>
+        <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif] -->
+
+</head>
+<body>
+
+    <!-- container限制宽度，并居中 -->
+    <div class="container">
+
+        <h1 class="page-header">导航路径与分页器</h1>
+
+        <ul class="breadcrumb">
+            <li><a href="#">首页</a> <span class="divider">/</span></li>
+            <li class="active">产品列表</li>
+        </ul>
+
+        <div class="pagination">
+            <ul>
+                <li><a href="#">1</a></li>
+                <li class="active"><a href="#">2</a></li>
+                <li><a href="#">3</a></li>
+                <li><a href="#">4</a></li>
+                <li><a href="#">5</a></li>
+            </ul>
+        </div>
+
+        <ul class="pager">
+            <li><a href="#">前一页</a></li>
+            <li><a href="#">后一页</a></li>
+        </ul>
+
+        <ul class="pager">
+            <li class="prev"><a href="#">前一页</a></li>
+            <li class="next"><a href="#">后一页</a></li>
+        </ul>
+
+    </div>
+
+    <script src="js/jquery-3.1.1.js"></script>
+    <script src="js/bootstrap-2.3.js"></script>
+</body>
+</html>

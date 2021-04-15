@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Bootstrap</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <link href="css/bootstrap-2.3.css" rel="stylesheet">
+
+    <!-- IE9兼容 -->
+    <!-- [if llt IE 9]>
+        <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif] -->
+
+</head>
+<body>
+
+    <!-- container限制宽度，并居中 -->
+    <div class="container">
+
+        <h1 class="page-header">导航</h1>
+
+        <div class="navbar navbar-fixed-top">
+            <div class="navbar-inner">
+                <div class="container">
+                    <a class="brand" href="#">Bootstrap</a>
+                    <ul class="nav">
+                        <li class="active"><a href="#">首页</a></li>
+                        <li><a href="#">项目</a></li>
+                        <li class="dropdown">
+                            <a class="dropdown-toggle" data-toggle="dropdown" href="#">项目
+                                <span class="caret"></span>
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li>111111</li>
+                                <li>111111</li>
+                                <li>111111</li>
+                            </ul>
+                        </li>
+                    </ul>
+
+                    <form class="navbar-search">
+                        <input type="text" class="search-query">
+                    </form>
+
+                    <ul class="nav pull-right">
+                        <li><a href="#">登陆</a></li>
+                        <li class="divider-vertical"><a href="#">项目</a></li>
+                        <li><a href="#">注册</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div style="height: 1580px"></div>
+
+    </div>
+
+    <script src="js/jquery-3.1.1.js"></script>
+    <script src="js/bootstrap-2.3.js"></script>
+</body>
+</html>

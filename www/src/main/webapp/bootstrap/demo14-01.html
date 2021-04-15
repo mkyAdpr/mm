@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Bootstrap</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <link href="css/bootstrap-2.3.css" rel="stylesheet">
+
+    <!-- IE9兼容 -->
+    <!-- [if llt IE 9]>
+        <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif] -->
+
+</head>
+<body>
+
+    <!-- container限制宽度，并居中 -->
+    <div class="container">
+
+        <h1>折叠内容</h1>
+
+        <div class="accordion" id="accordion1">
+            <div class="accordion-group">
+                <div class="accordion-heading">
+                    <a class="accordion-toggle" href="#collapse1" data-toggle="collapse" data-parent="#accordion1">显示折叠1</a>
+                </div>
+                <div class="collapse in" id="collapse1">
+                    <div class="accordion-inner">
+                        啊实打实的撒大苏打实打实，啊实打实大飒飒。
+                    </div>
+                </div>
+            </div>
+
+            <div class="accordion-group">
+                <div class="accordion-heading">
+                    <a class="accordion-toggle" href="#collapse2" data-toggle="collapse" data-parent="#accordion1">显示折叠1</a>
+                </div>
+                <div class="collapse" id="collapse2">
+                    <div class="accordion-inner">
+                        啊实打实的撒大苏打实打实，啊实打实大飒飒。
+                    </div>
+                </div>
+            </div>
+
+            <div class="accordion-group">
+                <div class="accordion-heading">
+                    <a class="accordion-toggle" href="#collapse3" data-toggle="collapse" data-parent="#accordion1">显示折叠1</a>
+                </div>
+                <div class="collapse" id="collapse3">
+                    <div class="accordion-inner">
+                        啊实打实的撒大苏打实打实，啊实打实大飒飒。
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <script src="js/jquery-3.1.1.js"></script>
+    <script src="js/bootstrap-2.3.js"></script>
+</body>
+</html>

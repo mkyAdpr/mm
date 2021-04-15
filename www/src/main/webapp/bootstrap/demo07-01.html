@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Bootstrap</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <link href="css/bootstrap-2.3.css" rel="stylesheet">
+
+    <!-- IE9兼容 -->
+    <!-- [if llt IE 9]>
+        <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif] -->
+
+</head>
+<body>
+
+    <!-- container限制宽度，并居中 -->
+    <div class="container">
+
+        <h1 class="page-header">下拉菜单的按钮</h1>
+
+        <div class="btn-toolbar">
+
+            <div class="btn-group">
+                <a class="btn dropdown-toggle" data-toggle="dropdown" href="#">字体<span class="caret"></span></a>
+                <ul class="dropdown-menu">
+                    <li><a href="#">黑体</a></li>
+                    <li><a href="#">宋体</a></li>
+                    <li><a href="#">仿宋</a></li>
+                </ul>
+            </div>
+
+            <div class="btn-group">
+                <a class="btn" href="#">字体</a>
+                <a class="btn dropdown-toggle" data-toggle="dropdown" href="#"><span class="caret"></span></a>
+                <ul class="dropdown-menu">
+                    <li><a href="#">黑体</a></li>
+                    <li><a href="#">宋体</a></li>
+                    <li><a href="#">仿宋</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/jquery-3.1.1.js"></script>
+    <script src="js/bootstrap-2.3.js"></script>
+</body>
+</html>

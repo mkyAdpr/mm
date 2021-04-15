@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Bootstrap</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <link href="css/bootstrap-2.3.css" rel="stylesheet">
+
+    <!-- IE9兼容 -->
+    <!-- [if llt IE 9]>
+        <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif] -->
+
+</head>
+<body>
+
+    <!-- container限制宽度，并居中 -->
+    <div class="container">
+
+        <h1 class="page-header">表单</h1>
+
+        <form class="form-horizontal">
+            <fieldset>
+                <legend>用户登录</legend>
+                <div class="control-group">
+                    <label class="control-label" for="username">用户名：</label>
+                    <div class="controls">
+                        <input id="username" type="text">
+                        <p class="help-block">请输入用户名</p>
+                    </div>
+                </div>
+
+                <div class="control-group">
+                    <label class="control-label" for="password">密码：</label>
+                    <div class="controls">
+                        <input id="password" type="text">
+                        <p class="help-block">请输入密码</p>
+                    </div>
+                </div>
+            </fieldset>
+
+            <div class="form-actions">
+                <button type="submit" class="btn btn-primary">登陆</button>
+            </div>
+        </form>
+
+    </div>
+
+    <script src="js/jquery-3.1.1.js"></script>
+    <script src="js/bootstrap-2.3.js"></script>
+</body>
+</html>
