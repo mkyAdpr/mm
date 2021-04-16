@@ -29,7 +29,7 @@
     <bytecodeTargetLevel>
       <module name="base" target="1.5" />
       <module name="mm" target="1.5" />
-      <module name="www" target="1.5" />
+      <module name="www" target="1.7" />
     </bytecodeTargetLevel>
   </component>
 </project>
