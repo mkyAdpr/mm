@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xmlns:mvc="http://www.springframework.org/schema/mvc" xmlns:task="http://www.springframework.org/schema/task"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd http://www.springframework.org/schema/mvc http://www.springframework.org/schema/mvc/spring-mvc.xsd http://www.springframework.org/schema/task http://www.springframework.org/schema/task/spring-task.xsd">
+
+    <import resource="classpath*:applicationContext.xml" />
+
+    <mvc:default-servlet-handler/>
+
+    <!-- 默认扫描的包路径 -->
+    <context:component-scan base-package="mm.www.*" />
+
+    <!-- 定义跳转的文件的前后缀 -->
+    <bean id="viewResolver" class="org.springframework.web.servlet.view.InternalResourceViewResolver">
+        <property name="prefix" value="/WEB-INF/jsp/" />
+        <property name="suffix" value=".jsp" />
+    </bean>
+
+    <!-- 添加注解驱动 -->
+    <mvc:annotation-driven>
+        <mvc:message-converters>
+            <bean class="org.springframework.http.converter.StringHttpMessageConverter">
+                <constructor-arg value="utf-8" />
+            </bean>
+            <bean class="org.springframework.http.converter.json.MappingJackson2HttpMessageConverter">
+                <property name="supportedMediaTypes">
+                    <list>
+                        <value>text/html;charset=utf-8</value>
+                        <value>text/json;charset=utf-8</value>
+                        <value>application/json;charset=utf-8</value>
+                    </list>
+                </property>
+            </bean>
+        </mvc:message-converters>
+    </mvc:annotation-driven>
+
+    <!-- 拦截器配置 -->
+    <mvc:interceptors>
+        <!-- 使用bean定义一个Interceptor，直接定义在mvc:interceptors根下面的Interceptor将拦截所有的请求 -->
+        <bean class="mm.www.interceptor.URLInterceptor"/>
+        <bean class="mm.www.interceptor.AuthCookieInterceptor"/>
+
+        <mvc:interceptor>
+            <mvc:mapping path="/**"/>
+
+            <mvc:exclude-mapping path="/res/**"/>
+            <mvc:exclude-mapping path="/css/**"/>
+            <mvc:exclude-mapping path="/images/**"/>
+            <mvc:exclude-mapping path="/js/**"/>
+            <mvc:exclude-mapping path="*.jsp"/>
+
+            <mvc:exclude-mapping path="/"/>
+            <mvc:exclude-mapping path="/login" />
+
+            <bean class="mm.www.interceptor.LoginInterceptor"/>
+        </mvc:interceptor>
+    </mvc:interceptors>
+
+    <!-- 上传文件拦截，设置最大上传文件大小   10M=10*1024*1024(B)=10485760 bytes -->
+    <bean id="multipartResolver" class="org.springframework.web.multipart.commons.CommonsMultipartResolver">
+        <property name="maxUploadSize" value="10485760"/>
+    </bean>
+
+    <!-- 定时器 -->
+    <!--<task:scheduled-tasks>
+        <task:scheduled ref="linkTongtu" method="linkTongtu" cron="0 0/5 9-22 * * ?"/>              &lt;!&ndash;9点-22点每隔2S触发一次&ndash;&gt;
+        <task:scheduled ref="linkMabang" method="linkMaBang" cron="0 0/5 9-22 * * ?"/>              &lt;!&ndash;9点-22点每隔2S触发一次&ndash;&gt;
+
+        <task:scheduled ref="CDEKTrackCurrentMonth" method="run" cron="0 0 0,6,12,18 * * ?"/>       &lt;!&ndash; 每天0点,6点,12点,18点执行跟踪 &ndash;&gt;
+        <task:scheduled ref="CDEKTrackLastMonth" method="run" cron="0 0 0,6,12,18 * * ?"/>          &lt;!&ndash; 每天0点,6点,12点,18点执行跟踪 &ndash;&gt;
+        <task:scheduled ref="CDEKTrackBeforeLastMonth" method="run" cron="0 0 0,6,12,18 * * ?"/>   &lt;!&ndash; 每天0点,6点,12点,18点执行跟踪 &ndash;&gt;
+    </task:scheduled-tasks>-->
+
+</beans>
